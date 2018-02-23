@@ -1,0 +1,31 @@
+{
+  "name": "soss",
+  "version": "1.0.0",
+  "description": "California Hydrogen Station Operational Status System (SOSS) API",
+  "main": "build/src/soss.js",
+  "types": "build/src/soss.d.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc -p .",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gts": "^0.5.3",
+    "typescript": "~2.6.1"
+  },
+  "dependencies": {
+    "@types/cheerio": "^0.22.7",
+    "@types/request-promise-native": "^1.0.13",
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
