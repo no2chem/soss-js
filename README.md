@@ -1,4 +1,4 @@
-# California Hydrogen Station Operational Status System (SOSS) API
+# California Hydrogen Station Operational Status System API
 
 This project enables a user to query the [California Hydrogen Fuel Cell Partnership](https://cafcp.org)'s
 Station Operational Status System (SOSS). This is the same data that appears on the California Hydrogen Fuel Cell
