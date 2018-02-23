@@ -3,5 +3,5 @@ node_js:
   - "node"
   - "lts/*"
 before_script:
-  - yarn global add typescript
+  - yarn global add typescript gts
 cache: yarn
