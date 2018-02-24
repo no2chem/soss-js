@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SossStationMessageNode | soss</title>
+	<title>SossStationStaticData | soss</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_soss_.html">&quot;soss&quot;</a>
-				</li>
-				<li>
-					<a href="_soss_.sossstationmessagenode.html">SossStationMessageNode</a>
+					<a href="sossstationstaticdata.html">SossStationStaticData</a>
 				</li>
 			</ul>
-			<h1>Interface SossStationMessageNode</h1>
+			<h1>Interface SossStationStaticData</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SossStationMessageNode</span>
+						<span class="target">SossStationStaticData</span>
 					</li>
 				</ul>
 			</section>
@@ -84,7 +81,8 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_soss_.sossstationmessagenode.html#station" class="tsd-kind-icon">station</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="sossstationstaticdata.html#location" class="tsd-kind-icon">location</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="sossstationstaticdata.html#node_view" class="tsd-kind-icon">node_<wbr>view</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,14 +91,29 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="station" class="tsd-anchor"></a>
-					<h3>station</h3>
-					<div class="tsd-signature tsd-kind-icon">station<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="location" class="tsd-anchor"></a>
+					<h3>location</h3>
+					<div class="tsd-signature tsd-kind-icon">location<span class="tsd-signature-symbol">:</span> <a href="sosslocationdata.html" class="tsd-signature-type">SossLocationData</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/no2chem/soss-js/blob/934cb52/src/soss.ts#L31">soss.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/no2chem/soss-js/blob/a56fdab/src/soss.ts#L69">soss.ts:69</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="node_view" class="tsd-anchor"></a>
+					<h3>node_<wbr>view</h3>
+					<div class="tsd-signature tsd-kind-icon">node_<wbr>view<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/no2chem/soss-js/blob/a56fdab/src/soss.ts#L71">soss.ts:71</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An HTML string.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -110,72 +123,69 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_soss_.html">"soss"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_soss_spec_.html">"soss.spec"</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="../enums/_soss_.stationstatus.html" class="tsd-kind-icon">Station<wbr>Status</a>
+					<li class=" tsd-kind-enum">
+						<a href="../enums/stationstatus.html" class="tsd-kind-icon">Station<wbr>Status</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_soss_.sosslocationdata.html" class="tsd-kind-icon">Soss<wbr>Location<wbr>Data</a>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="sosslocationdata.html" class="tsd-kind-icon">Soss<wbr>Location<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_soss_.sossstationmessage.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Message</a>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="sossstationmessage.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Message</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_soss_.sossstationmessagedata.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Message<wbr>Data</a>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="sossstationmessagedata.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Message<wbr>Data</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_soss_.sossstationmessagedatanode.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Message<wbr>Data<wbr>Node</a>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="sossstationmessagedatanode.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Message<wbr>Data<wbr>Node</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="sossstationmessagenode.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Message<wbr>Node</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_soss_.sossstationmessagenode.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Message<wbr>Node</a>
+					<li class="current tsd-kind-interface tsd-is-not-exported">
+						<a href="sossstationstaticdata.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Static<wbr>Data</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_soss_.sossstationmessagenode.html#station" class="tsd-kind-icon">station</a>
+								<a href="sossstationstaticdata.html#location" class="tsd-kind-icon">location</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="sossstationstaticdata.html#node_view" class="tsd-kind-icon">node_<wbr>view</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_soss_.sossstationstaticdata.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Static<wbr>Data</a>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="sossstationstatus.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Status</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_soss_.sossstationstatus.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Status</a>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="sossstationstatusnode.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Status<wbr>Node</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_soss_.sossstationstatusnode.html" class="tsd-kind-icon">Soss<wbr>Station<wbr>Status<wbr>Node</a>
+					<li class=" tsd-kind-interface">
+						<a href="station.html" class="tsd-kind-icon">Station</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_soss_.station.html" class="tsd-kind-icon">Station</a>
+					<li class=" tsd-kind-interface">
+						<a href="stationstaticdetail.html" class="tsd-kind-icon">Station<wbr>Static<wbr>Detail</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_soss_.stationstaticdetail.html" class="tsd-kind-icon">Station<wbr>Static<wbr>Detail</a>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="../globals.html#cafcpmobilesite" class="tsd-kind-icon">cafcp<wbr>Mobile<wbr>Site</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_soss_.html#cafcpmobilesite" class="tsd-kind-icon">cafcp<wbr>Mobile<wbr>Site</a>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="../globals.html#cafcpsite" class="tsd-kind-icon">cafcp<wbr>Site</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_soss_.html#cafcpsite" class="tsd-kind-icon">cafcp<wbr>Site</a>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#getstationstaticdetails" class="tsd-kind-icon">get<wbr>Station<wbr>Static<wbr>Details</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_soss_.html#getstationstaticdetails" class="tsd-kind-icon">get<wbr>Station<wbr>Static<wbr>Details</a>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#getstatus" class="tsd-kind-icon">get<wbr>Status</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_soss_.html#getstatus" class="tsd-kind-icon">get<wbr>Status</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_soss_.html#parsestation" class="tsd-kind-icon">parse<wbr>Station</a>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="../globals.html#parsestation" class="tsd-kind-icon">parse<wbr>Station</a>
 					</li>
 				</ul>
 			</nav>
