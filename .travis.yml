@@ -3,5 +3,16 @@ node_js:
   - "node"
   - "lts/*"
 before_script:
-  - yarn global add typescript gts
+  - yarn global add typescript gts typedoc
 cache: yarn
+before_deploy:
+  - yarn typedoc
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local_dir: docs
+  committer-from-gh: true
+  on:
+    branch: master
