@@ -1,6 +1,6 @@
 {
   "name": "soss",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "California Hydrogen Station Operational Status System (SOSS) API",
   "main": "build/src/soss.js",
   "types": "build/src/soss.d.js",
