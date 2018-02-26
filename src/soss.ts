@@ -214,7 +214,7 @@ export const getStatus = async(): Promise<Station[]> => {
 };
 
 const trimOrEmpty = (data?: string): string => {
-  return data === undefined ? '' : data.trim();
+  return data === undefined || data === null ? '' : data.trim();
 };
 /**
  * Get the static details of a specific station (from CAFCP).
