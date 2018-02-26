@@ -213,8 +213,8 @@ export const getStatus = async(): Promise<Station[]> => {
   return parsedStatus;
 };
 
-const trimOrEmpty = (data?: string) : string  => {
-  return data === undefined ? "" : data.trim();
+const trimOrEmpty = (data?: string): string => {
+  return data === undefined ? '' : data.trim();
 };
 /**
  * Get the static details of a specific station (from CAFCP).
@@ -240,22 +240,23 @@ export const getStationStaticDetails =
     street: data.location.street,
     zip: Number(data.location.postal_code),
     renewable: Number((renewableMatch as RegExpExecArray)[1]),
-    type:
-        trimOrEmpty($('table').find('tr').eq(2).find('td').eq(1).text() as string),
-    status:
-        trimOrEmpty($('table').find('tr').eq(3).find('td').eq(1).text() as string),
-    openDate:
-        trimOrEmpty($('table').find('tr').eq(4).find('td').eq(1).text() as string),
-    pressure:
-        trimOrEmpty($('table').find('tr').eq(5).find('td').eq(1).text() as string),
-    source:
-        trimOrEmpty($('table').find('tr').eq(6).find('td').eq(1).text() as string),
-    hours:
-        trimOrEmpty($('table').find('tr').eq(7).find('td').eq(1).text() as string),
-    website: trimOrEmpty($('table').find('tr').eq(8).find('td').eq(1).find('a').attr(
-                  'href') as string),
-    phone:
-      trimOrEmpty($('table').find('tr').eq(9).find('td').eq(1).html() as string)
+    type: trimOrEmpty(
+        $('table').find('tr').eq(2).find('td').eq(1).text() as string),
+    status: trimOrEmpty(
+        $('table').find('tr').eq(3).find('td').eq(1).text() as string),
+    openDate: trimOrEmpty(
+        $('table').find('tr').eq(4).find('td').eq(1).text() as string),
+    pressure: trimOrEmpty(
+        $('table').find('tr').eq(5).find('td').eq(1).text() as string),
+    source: trimOrEmpty(
+        $('table').find('tr').eq(6).find('td').eq(1).text() as string),
+    hours: trimOrEmpty(
+        $('table').find('tr').eq(7).find('td').eq(1).text() as string),
+    website: trimOrEmpty(
+        $('table').find('tr').eq(8).find('td').eq(1).find('a').attr('href') as
+        string),
+    phone: trimOrEmpty(
+        $('table').find('tr').eq(9).find('td').eq(1).html() as string)
   };
 };
 //#endregion
