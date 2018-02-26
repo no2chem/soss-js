@@ -181,6 +181,8 @@ export interface StationStaticDetail {
   website: string;
   /** The customer support number of the station operator. */
   phone: string;
+  /** The station operator (may not be available). */
+  operator?: string;
 }
 //#endregion
 
@@ -240,23 +242,52 @@ export const getStationStaticDetails =
     street: data.location.street,
     zip: Number(data.location.postal_code),
     renewable: Number((renewableMatch as RegExpExecArray)[1]),
-    type: trimOrEmpty(
-        $('table').find('tr').eq(2).find('td').eq(1).text() as string),
-    status: trimOrEmpty(
-        $('table').find('tr').eq(3).find('td').eq(1).text() as string),
-    openDate: trimOrEmpty(
-        $('table').find('tr').eq(4).find('td').eq(1).text() as string),
-    pressure: trimOrEmpty(
-        $('table').find('tr').eq(5).find('td').eq(1).text() as string),
-    source: trimOrEmpty(
-        $('table').find('tr').eq(6).find('td').eq(1).text() as string),
-    hours: trimOrEmpty(
-        $('table').find('tr').eq(7).find('td').eq(1).text() as string),
-    website: trimOrEmpty(
-        $('table').find('tr').eq(8).find('td').eq(1).find('a').attr('href') as
-        string),
-    phone: trimOrEmpty(
-        $('table').find('tr').eq(9).find('td').eq(1).html() as string)
+    type: trimOrEmpty($('table')
+                          .find('tr:contains(\'Station Type\')')
+                          .find('td')
+                          .eq(1)
+                          .text()),
+    status: trimOrEmpty($('table')
+                            .find('tr:contains(\'Development Status\')')
+                            .find('td')
+                            .eq(1)
+                            .text()),
+    openDate: trimOrEmpty($('table')
+                              .find('tr:contains(\'Expected to Open\')')
+                              .find('td')
+                              .eq(1)
+                              .text()),
+    pressure: trimOrEmpty($('table')
+                              .find('tr:contains(\'Fuel Pressure\')')
+                              .find('td')
+                              .eq(1)
+                              .text()),
+    source: trimOrEmpty($('table')
+                            .find('tr:contains(\'Hydrogen Source\')')
+                            .find('td')
+                            .eq(1)
+                            .text()),
+    hours: trimOrEmpty($('table')
+                           .find('tr:contains(\'Opening Hours\')')
+                           .find('td')
+                           .eq(1)
+                           .text()),
+    website: trimOrEmpty($('table')
+                             .find('tr:contains(\'Station Website\')')
+                             .find('td')
+                             .eq(1)
+                             .find('a')
+                             .attr('href')),
+    phone: trimOrEmpty($('table')
+                           .find('tr:contains(\'Station Customer Service\')')
+                           .find('td')
+                           .eq(1)
+                           .text()),
+    operator: trimOrEmpty($('table')
+                              .find('tr:contains(\'Station Operator\')')
+                              .find('td')
+                              .eq(1)
+                              .text())
   };
 };
 //#endregion
