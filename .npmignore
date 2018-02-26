@@ -1,0 +1,10 @@
+docs
+.travis.yml
+tsconfig.json
+*.spec.ts
+*.spec.js
+*.spec.d.ts
+src
+node_modules
+.idea
+*.tgz

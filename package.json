@@ -1,6 +1,6 @@
 {
   "name": "soss",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "California Hydrogen Station Operational Status System (SOSS) API",
   "main": "build/src/soss.js",
   "types": "build/src/soss.d.js",
@@ -15,8 +15,12 @@
     "posttest": "npm run check",
     "typedoc": "typedoc --out docs $(pwd)/src --target es6 --mode file --tsconfig ./tsconfig.json --excludePrivate --excludeProtected --exclude **/*.spec.ts"
   },
-  "keywords": [],
-  "author": "",
+  "bugs": {
+    "url" : "https://github.com/no2chem/soss-js/issues"
+  },
+  "homepage" : "https://github.com/no2chem/soss-js/",
+  "keywords": [ "hydrogen", "fuel-cell",  "soss", "cafcp" ],
+  "author": { "name" : "Michael Wei" },
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/chai": "^4.1.2",

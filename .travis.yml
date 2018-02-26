@@ -7,12 +7,29 @@ before_script:
 cache: yarn
 before_deploy:
   - yarn typedoc
+  - yarn pack
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  local_dir: docs
-  committer-from-gh: true
-  on:
-    branch: master
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    local_dir: docs
+    committer-from-gh: true
+    on:
+      branch: master
+      node: "node"
+  - provider: releases
+    api_key: $GITHUB_TOKEN
+    file_glob: true
+    file: "soss-*.tgz"
+    skip_cleanup: true
+    on:
+      branch: master
+      node: "node"
+      tags: true
+  - provider: npm
+    api_key: $NPM_TOKEN
+    skip_cleanup: true
+    email: "mwei@cs.ucsd.edu"
+    on:
+      tags: true
