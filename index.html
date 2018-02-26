@@ -69,6 +69,17 @@
 				<p>This project enables a user to query the <a href="https://cafcp.org">California Hydrogen Fuel Cell Partnership</a>&#39;s
 					Station Operational Status System (SOSS). This is the same data that appears on the California Hydrogen Fuel Cell
 				Partnership&#39;s <a href="https://cafcp.org/stationmap">station map</a>.</p>
+				<p>You can find API documentation <a href="https://no2chem.github.io/soss-js/">here</a>. Typescript definitions are included.</p>
+				<p>A quick example which prints the status of all stations in the system:</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> soss <span class="hljs-keyword">from</span> <span class="hljs-string">"soss"</span>;
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printStatus</span>(<span class="hljs-params"></span>) : <span class="hljs-title">void</span> </span>{
+  <span class="hljs-keyword">let</span> stationStatus = <span class="hljs-keyword">await</span> soss.getStatus();
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(stationStatus, <span class="hljs-literal">null</span> , <span class="hljs-number">2</span>));
+};
+
+printStatus();
+</code></pre>
 				<p>This project is not affiliated in any way with  California Hydrogen Fuel Cell Partnership.</p>
 			</div>
 		</div>
